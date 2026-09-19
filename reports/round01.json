@@ -1,0 +1,717 @@
+{
+ "provider": "adapter",
+ "samples": 5,
+ "ts": "2026-09-19T11:23:46",
+ "rows": [
+  {
+   "entry": "PR-A-01",
+   "qid": "dedup_defined",
+   "question": "plan.batches 中 B0 是否已把『四个平行目录 diff 去重』定义为后续批次开跑前的硬性先决步骤（而不是可并行的普通批次）？",
+   "primitive": "noul",
+   "n_samples": 5,
+   "value": 0.3,
+   "median": 0.3,
+   "stdev": 0.0,
+   "confidence": 0.8,
+   "majority_yes": false,
+   "tier": "🟡复核",
+   "quarantine": null
+  },
+  {
+   "entry": "PR-A-01",
+   "qid": "deep_demo_criteria",
+   "question": "计划是否给出了『典型 demo』的可操作入选标准（如需含视频/GIF/可一键复跑脚本/有实测数字），使 B1/B2 的深读挑选不依赖临场主观判断？",
+   "primitive": "noul",
+   "n_samples": 5,
+   "value": 0.2,
+   "median": 0.2,
+   "stdev": 0.0,
+   "confidence": 0.55,
+   "majority_yes": false,
+   "tier": "🔻隔离(<0.60)",
+   "quarantine": true
+  },
+  {
+   "entry": "PR-A-01",
+   "qid": "network_fallback",
+   "question": "plan.risks 是否包含『GitHub 直连不稳定』这一已实际发生的风险及其应对（镜像/浅克隆/离线缓存清单）？",
+   "primitive": "noul",
+   "n_samples": 5,
+   "value": 0.15,
+   "median": 0.15,
+   "stdev": 0.0,
+   "confidence": 0.9,
+   "majority_yes": false,
+   "tier": "✅采信",
+   "quarantine": null
+  },
+  {
+   "entry": "PR-A-01",
+   "qid": "closure_loop",
+   "question": "计划是否为 B3 产出的『jev_eval.py 改造建议』定义了闭环验收步骤（改完用 120 条金标回归、一致率不掉才算完成）？",
+   "primitive": "noul",
+   "n_samples": 5,
+   "value": 0.7,
+   "median": 0.7,
+   "stdev": 0.0,
+   "confidence": 0.5,
+   "majority_yes": true,
+   "tier": "🔻隔离(<0.60)",
+   "quarantine": true
+  },
+  {
+   "entry": "PR-A-01",
+   "qid": "effort_credibility",
+   "question": "plan.cadence 相对 plan.batches 的总工时是否可信？legend: 0=逐批工时加总明显超过声称的4天且无压缩手段说明; 1=加总与4天接近但个别批次(库数×10分钟扫读)偏乐观; 2=每批工时有依据（扫读/深读分层计时）且留了缓冲",
+   "primitive": "score",
+   "n_samples": 5,
+   "value": 1.0,
+   "median": 1.0,
+   "stdev": 0.0,
+   "confidence": 0.6,
+   "tier": "🟡复核",
+   "quarantine": null
+  },
+  {
+   "entry": "PR-A-01",
+   "qid": "cost_budget",
+   "question": "计划对『分析与复跑的花费』是否有预算控制？legend: 0=没有任何金额上限或token估算，仅定性说'省key'; 1=只声明'官方key留给对照、优先本地路线'，无适配器调用费用与本地算力(4B模型)需求估算; 2=给出各路线单次调用成本、复跑demo的总花费与算力占用上限",
+   "primitive": "score",
+   "n_samples": 5,
+   "value": 1.0,
+   "median": 1.0,
+   "stdev": 0.0,
+   "confidence": 0.88,
+   "tier": "✅采信",
+   "quarantine": null
+  },
+  {
+   "entry": "PR-A-01",
+   "qid": "demo_validation_rigor",
+   "question": "demos/ 复跑成果的验收严格度如何？legend: 0=没有验收要求，跑通截图即可; 1=要求复跑成功但未定义与社区宣称数字（7秒$0.0039、n=1316校准0.83）的比对方法; 2=每个demo带原始宣称指标复测表，偏差超阈值标红并回写报告",
+   "primitive": "score",
+   "n_samples": 5,
+   "value": 1.0,
+   "median": 1.0,
+   "stdev": 0.0,
+   "confidence": 0.7,
+   "tier": "🟡复核",
+   "quarantine": null
+  },
+  {
+   "entry": "PR-A-01",
+   "qid": "gap_ranking",
+   "question": "plan 作为一个执行文档，当前最大的单点缺口属于哪一类？",
+   "primitive": "choice",
+   "n_samples": 5,
+   "value": "工时与范围不匹配",
+   "distribution": {
+    "工时与范围不匹配": 5
+   },
+   "unanimous": true,
+   "confidence": 0.5,
+   "tier": "🔻隔离(<0.60)",
+   "quarantine": true
+  },
+  {
+   "entry": "PR-A-01",
+   "qid": "priority_coherence",
+   "question": "B7 含 16 个库（全部批次中最多）却排『低』优先级且只分 1 天，与 B1/B3 的『高优先少库多日』相比，批次优先级排序是否自洽？",
+   "primitive": "choice",
+   "n_samples": 5,
+   "value": "轻微冲突",
+   "distribution": {
+    "轻微冲突": 5
+   },
+   "unanimous": true,
+   "confidence": 0.8,
+   "tier": "🟡复核",
+   "quarantine": false
+  },
+  {
+   "entry": "PR-B-01",
+   "qid": "transfer_to_novel",
+   "question": "state.uncovered_topics 的第一条是否成立：计划缺少『生态分析结论→网文审稿三玩法』的量化验收设计（如用梗筛选命中率或稿件体检一致率来判定分析有产出）？",
+   "primitive": "noul",
+   "n_samples": 5,
+   "value": 0.8,
+   "median": 0.8,
+   "stdev": 0.0,
+   "confidence": 0.75,
+   "majority_yes": true,
+   "tier": "🟡复核",
+   "quarantine": null
+  },
+  {
+   "entry": "PR-B-01",
+   "qid": "what_missing_most",
+   "question": "一个准备开工的执行计划，state 所暴露的内容最缺哪一项？",
+   "primitive": "choice",
+   "n_samples": 5,
+   "value": "明确的完成定义(DoD)",
+   "distribution": {
+    "明确的完成定义(DoD)": 5
+   },
+   "unanimous": true,
+   "confidence": 0.66,
+   "tier": "🟡复核",
+   "quarantine": false
+  }
+ ],
+ "raw": {
+  "PR-A-01": [
+   {
+    "dedup_defined": {
+     "noul": 0.3,
+     "confidence": 0.8
+    },
+    "deep_demo_criteria": {
+     "noul": 0.2,
+     "confidence": 0.55
+    },
+    "network_fallback": {
+     "noul": 0.15,
+     "confidence": 0.9
+    },
+    "closure_loop": {
+     "noul": 0.7,
+     "confidence": 0.5
+    },
+    "effort_credibility": {
+     "score": 1.0,
+     "probabilities": {
+      "a": 0.6,
+      "b": 0.3,
+      "c": 0.1
+     }
+    },
+    "cost_budget": {
+     "score": 1.0,
+     "confidence": 0.88
+    },
+    "demo_validation_rigor": {
+     "score": 1.0,
+     "confidence": 0.7
+    },
+    "gap_ranking": {
+     "choice": "工时与范围不匹配",
+     "probabilities": {
+      "工时与范围不匹配": 0.5,
+      "缺真实Jev校准对照": 0.3
+     }
+    },
+    "priority_coherence": {
+     "choice": "轻微冲突",
+     "probabilities": {
+      "轻微冲突": 0.8
+     }
+    },
+    "transfer_to_novel": {
+     "noul": 0.8,
+     "confidence": 0.75
+    },
+    "what_missing_most": {
+     "choice": "明确的完成定义(DoD)",
+     "confidence": 0.66
+    }
+   },
+   {
+    "dedup_defined": {
+     "noul": 0.3,
+     "confidence": 0.8
+    },
+    "deep_demo_criteria": {
+     "noul": 0.2,
+     "confidence": 0.55
+    },
+    "network_fallback": {
+     "noul": 0.15,
+     "confidence": 0.9
+    },
+    "closure_loop": {
+     "noul": 0.7,
+     "confidence": 0.5
+    },
+    "effort_credibility": {
+     "score": 1.0,
+     "probabilities": {
+      "a": 0.6,
+      "b": 0.3,
+      "c": 0.1
+     }
+    },
+    "cost_budget": {
+     "score": 1.0,
+     "confidence": 0.88
+    },
+    "demo_validation_rigor": {
+     "score": 1.0,
+     "confidence": 0.7
+    },
+    "gap_ranking": {
+     "choice": "工时与范围不匹配",
+     "probabilities": {
+      "工时与范围不匹配": 0.5,
+      "缺真实Jev校准对照": 0.3
+     }
+    },
+    "priority_coherence": {
+     "choice": "轻微冲突",
+     "probabilities": {
+      "轻微冲突": 0.8
+     }
+    },
+    "transfer_to_novel": {
+     "noul": 0.8,
+     "confidence": 0.75
+    },
+    "what_missing_most": {
+     "choice": "明确的完成定义(DoD)",
+     "confidence": 0.66
+    }
+   },
+   {
+    "dedup_defined": {
+     "noul": 0.3,
+     "confidence": 0.8
+    },
+    "deep_demo_criteria": {
+     "noul": 0.2,
+     "confidence": 0.55
+    },
+    "network_fallback": {
+     "noul": 0.15,
+     "confidence": 0.9
+    },
+    "closure_loop": {
+     "noul": 0.7,
+     "confidence": 0.5
+    },
+    "effort_credibility": {
+     "score": 1.0,
+     "probabilities": {
+      "a": 0.6,
+      "b": 0.3,
+      "c": 0.1
+     }
+    },
+    "cost_budget": {
+     "score": 1.0,
+     "confidence": 0.88
+    },
+    "demo_validation_rigor": {
+     "score": 1.0,
+     "confidence": 0.7
+    },
+    "gap_ranking": {
+     "choice": "工时与范围不匹配",
+     "probabilities": {
+      "工时与范围不匹配": 0.5,
+      "缺真实Jev校准对照": 0.3
+     }
+    },
+    "priority_coherence": {
+     "choice": "轻微冲突",
+     "probabilities": {
+      "轻微冲突": 0.8
+     }
+    },
+    "transfer_to_novel": {
+     "noul": 0.8,
+     "confidence": 0.75
+    },
+    "what_missing_most": {
+     "choice": "明确的完成定义(DoD)",
+     "confidence": 0.66
+    }
+   },
+   {
+    "dedup_defined": {
+     "noul": 0.3,
+     "confidence": 0.8
+    },
+    "deep_demo_criteria": {
+     "noul": 0.2,
+     "confidence": 0.55
+    },
+    "network_fallback": {
+     "noul": 0.15,
+     "confidence": 0.9
+    },
+    "closure_loop": {
+     "noul": 0.7,
+     "confidence": 0.5
+    },
+    "effort_credibility": {
+     "score": 1.0,
+     "probabilities": {
+      "a": 0.6,
+      "b": 0.3,
+      "c": 0.1
+     }
+    },
+    "cost_budget": {
+     "score": 1.0,
+     "confidence": 0.88
+    },
+    "demo_validation_rigor": {
+     "score": 1.0,
+     "confidence": 0.7
+    },
+    "gap_ranking": {
+     "choice": "工时与范围不匹配",
+     "probabilities": {
+      "工时与范围不匹配": 0.5,
+      "缺真实Jev校准对照": 0.3
+     }
+    },
+    "priority_coherence": {
+     "choice": "轻微冲突",
+     "probabilities": {
+      "轻微冲突": 0.8
+     }
+    },
+    "transfer_to_novel": {
+     "noul": 0.8,
+     "confidence": 0.75
+    },
+    "what_missing_most": {
+     "choice": "明确的完成定义(DoD)",
+     "confidence": 0.66
+    }
+   },
+   {
+    "dedup_defined": {
+     "noul": 0.3,
+     "confidence": 0.8
+    },
+    "deep_demo_criteria": {
+     "noul": 0.2,
+     "confidence": 0.55
+    },
+    "network_fallback": {
+     "noul": 0.15,
+     "confidence": 0.9
+    },
+    "closure_loop": {
+     "noul": 0.7,
+     "confidence": 0.5
+    },
+    "effort_credibility": {
+     "score": 1.0,
+     "probabilities": {
+      "a": 0.6,
+      "b": 0.3,
+      "c": 0.1
+     }
+    },
+    "cost_budget": {
+     "score": 1.0,
+     "confidence": 0.88
+    },
+    "demo_validation_rigor": {
+     "score": 1.0,
+     "confidence": 0.7
+    },
+    "gap_ranking": {
+     "choice": "工时与范围不匹配",
+     "probabilities": {
+      "工时与范围不匹配": 0.5,
+      "缺真实Jev校准对照": 0.3
+     }
+    },
+    "priority_coherence": {
+     "choice": "轻微冲突",
+     "probabilities": {
+      "轻微冲突": 0.8
+     }
+    },
+    "transfer_to_novel": {
+     "noul": 0.8,
+     "confidence": 0.75
+    },
+    "what_missing_most": {
+     "choice": "明确的完成定义(DoD)",
+     "confidence": 0.66
+    }
+   }
+  ],
+  "PR-B-01": [
+   {
+    "dedup_defined": {
+     "noul": 0.3,
+     "confidence": 0.8
+    },
+    "deep_demo_criteria": {
+     "noul": 0.2,
+     "confidence": 0.55
+    },
+    "network_fallback": {
+     "noul": 0.15,
+     "confidence": 0.9
+    },
+    "closure_loop": {
+     "noul": 0.7,
+     "confidence": 0.5
+    },
+    "effort_credibility": {
+     "score": 1.0,
+     "probabilities": {
+      "a": 0.6,
+      "b": 0.3,
+      "c": 0.1
+     }
+    },
+    "cost_budget": {
+     "score": 1.0,
+     "confidence": 0.88
+    },
+    "demo_validation_rigor": {
+     "score": 1.0,
+     "confidence": 0.7
+    },
+    "gap_ranking": {
+     "choice": "工时与范围不匹配",
+     "probabilities": {
+      "工时与范围不匹配": 0.5,
+      "缺真实Jev校准对照": 0.3
+     }
+    },
+    "priority_coherence": {
+     "choice": "轻微冲突",
+     "probabilities": {
+      "轻微冲突": 0.8
+     }
+    },
+    "transfer_to_novel": {
+     "noul": 0.8,
+     "confidence": 0.75
+    },
+    "what_missing_most": {
+     "choice": "明确的完成定义(DoD)",
+     "confidence": 0.66
+    }
+   },
+   {
+    "dedup_defined": {
+     "noul": 0.3,
+     "confidence": 0.8
+    },
+    "deep_demo_criteria": {
+     "noul": 0.2,
+     "confidence": 0.55
+    },
+    "network_fallback": {
+     "noul": 0.15,
+     "confidence": 0.9
+    },
+    "closure_loop": {
+     "noul": 0.7,
+     "confidence": 0.5
+    },
+    "effort_credibility": {
+     "score": 1.0,
+     "probabilities": {
+      "a": 0.6,
+      "b": 0.3,
+      "c": 0.1
+     }
+    },
+    "cost_budget": {
+     "score": 1.0,
+     "confidence": 0.88
+    },
+    "demo_validation_rigor": {
+     "score": 1.0,
+     "confidence": 0.7
+    },
+    "gap_ranking": {
+     "choice": "工时与范围不匹配",
+     "probabilities": {
+      "工时与范围不匹配": 0.5,
+      "缺真实Jev校准对照": 0.3
+     }
+    },
+    "priority_coherence": {
+     "choice": "轻微冲突",
+     "probabilities": {
+      "轻微冲突": 0.8
+     }
+    },
+    "transfer_to_novel": {
+     "noul": 0.8,
+     "confidence": 0.75
+    },
+    "what_missing_most": {
+     "choice": "明确的完成定义(DoD)",
+     "confidence": 0.66
+    }
+   },
+   {
+    "dedup_defined": {
+     "noul": 0.3,
+     "confidence": 0.8
+    },
+    "deep_demo_criteria": {
+     "noul": 0.2,
+     "confidence": 0.55
+    },
+    "network_fallback": {
+     "noul": 0.15,
+     "confidence": 0.9
+    },
+    "closure_loop": {
+     "noul": 0.7,
+     "confidence": 0.5
+    },
+    "effort_credibility": {
+     "score": 1.0,
+     "probabilities": {
+      "a": 0.6,
+      "b": 0.3,
+      "c": 0.1
+     }
+    },
+    "cost_budget": {
+     "score": 1.0,
+     "confidence": 0.88
+    },
+    "demo_validation_rigor": {
+     "score": 1.0,
+     "confidence": 0.7
+    },
+    "gap_ranking": {
+     "choice": "工时与范围不匹配",
+     "probabilities": {
+      "工时与范围不匹配": 0.5,
+      "缺真实Jev校准对照": 0.3
+     }
+    },
+    "priority_coherence": {
+     "choice": "轻微冲突",
+     "probabilities": {
+      "轻微冲突": 0.8
+     }
+    },
+    "transfer_to_novel": {
+     "noul": 0.8,
+     "confidence": 0.75
+    },
+    "what_missing_most": {
+     "choice": "明确的完成定义(DoD)",
+     "confidence": 0.66
+    }
+   },
+   {
+    "dedup_defined": {
+     "noul": 0.3,
+     "confidence": 0.8
+    },
+    "deep_demo_criteria": {
+     "noul": 0.2,
+     "confidence": 0.55
+    },
+    "network_fallback": {
+     "noul": 0.15,
+     "confidence": 0.9
+    },
+    "closure_loop": {
+     "noul": 0.7,
+     "confidence": 0.5
+    },
+    "effort_credibility": {
+     "score": 1.0,
+     "probabilities": {
+      "a": 0.6,
+      "b": 0.3,
+      "c": 0.1
+     }
+    },
+    "cost_budget": {
+     "score": 1.0,
+     "confidence": 0.88
+    },
+    "demo_validation_rigor": {
+     "score": 1.0,
+     "confidence": 0.7
+    },
+    "gap_ranking": {
+     "choice": "工时与范围不匹配",
+     "probabilities": {
+      "工时与范围不匹配": 0.5,
+      "缺真实Jev校准对照": 0.3
+     }
+    },
+    "priority_coherence": {
+     "choice": "轻微冲突",
+     "probabilities": {
+      "轻微冲突": 0.8
+     }
+    },
+    "transfer_to_novel": {
+     "noul": 0.8,
+     "confidence": 0.75
+    },
+    "what_missing_most": {
+     "choice": "明确的完成定义(DoD)",
+     "confidence": 0.66
+    }
+   },
+   {
+    "dedup_defined": {
+     "noul": 0.3,
+     "confidence": 0.8
+    },
+    "deep_demo_criteria": {
+     "noul": 0.2,
+     "confidence": 0.55
+    },
+    "network_fallback": {
+     "noul": 0.15,
+     "confidence": 0.9
+    },
+    "closure_loop": {
+     "noul": 0.7,
+     "confidence": 0.5
+    },
+    "effort_credibility": {
+     "score": 1.0,
+     "probabilities": {
+      "a": 0.6,
+      "b": 0.3,
+      "c": 0.1
+     }
+    },
+    "cost_budget": {
+     "score": 1.0,
+     "confidence": 0.88
+    },
+    "demo_validation_rigor": {
+     "score": 1.0,
+     "confidence": 0.7
+    },
+    "gap_ranking": {
+     "choice": "工时与范围不匹配",
+     "probabilities": {
+      "工时与范围不匹配": 0.5,
+      "缺真实Jev校准对照": 0.3
+     }
+    },
+    "priority_coherence": {
+     "choice": "轻微冲突",
+     "probabilities": {
+      "轻微冲突": 0.8
+     }
+    },
+    "transfer_to_novel": {
+     "noul": 0.8,
+     "confidence": 0.75
+    },
+    "what_missing_most": {
+     "choice": "明确的完成定义(DoD)",
+     "confidence": 0.66
+    }
+   }
+  ]
+ }
+}

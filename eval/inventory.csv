@@ -1,0 +1,260 @@
+﻿repo,batch,assign,in_lists,n_lists,owner_repos,desc
+0xnatoshi/jev-codex-router,B6,keyword,anotiawang|cobanov,2,1,"jev-codex-router - Per-turn Codex routing: Jev picks model, thinking depth, and speed mode."
+24601/augustus,B8,unclassified→B8,anilmatcha|anotiawang|yibie,3,1,"augustus - Coding agents: agent skill that maps Choice, Score, and Noul onto classical methods so an agent can place typed judgment in software, with "
+4esv/jev-eval,B3,keyword,cobanov,1,1,"jev-eval - Independent Jev versus GPT-5.6 Terra comparison on three labeled classification tasks, reporting accuracy, calibration, latency, and cost."
+aaronshaf/opencode-jev-orchestrator,B4,keyword,cobanov,1,1,opencode-jev-orchestrator - Keeps an OpenCode parent model fixed and uses Jev difficulty judgments to delegate harder turns to temporary subagents.
+owner-B/bicameral,B8,unclassified→B8,owner-B|anotiawang,2,5,"Bicameral - Pi coding harness: LLM writes, Jev supplies typed reflexes for policy, loop detection, and review. Explicitly not a sandbox."
+owner-B/heist-one,B2,keyword,owner-B|cobanov,2,5,heist-one - Browser stealth game where Jev judges guards while deterministic code owns the world.
+owner-B/jev-benchmarks,B3,keyword,anilmatcha|cobanov,2,5,"jev-benchmarks - Reproducible evaluation for calibration, selective risk, and latency."
+owner-B/s1-rs,B7,keyword,owner-B|anotiawang,2,5,"s1-rs - Rust derive layer for Choice / Score / Noul, typed question sets, confidence gates, and network-free tests."
+owner-B/typesafe-rs,B7,keyword,owner-B|anotiawang,2,5,typesafe-rs - Latency-focused Rust transport SDK aiming for behavioral parity with the official clients.
+abhixhek/jevcal,B3,plan,owner-B|anilmatcha|anotiawang|cobanov|yibie,5,1,"jevcal - Model evaluation: fits a per-question confidence threshold to a target accuracy on your own labeled data, verifies it on a held-out split, re"
+ably-labs/jev-pong,B2,plan,yibie,1,1,"Jev Pong - Model comparison: Pong where the ball advances one step per model decision, putting Jev head-to-head with LLMs through Vercel AI Gateway."
+abovecolin/ha-jev,B6,plan,owner-B|anilmatcha|anotiawang|cobanov|yibie,5,2,"HA-Jev - Smart home: Home Assistant integration that answers questions about the house as a probability, a choice, or a score."
+abovecolin/jevclient,B7,keyword,anotiawang|cobanov,2,2,"jevclient - Unofficial async Python client (`pip install jevclient`). Typed Noul / Choice / Score helpers, separate from the official `typesafe-sdk`."
+achimala/jevinci,B8,plan,yibie,1,1,"jevinci - Creative experiment: paints images by having Jev predict every pixel's colour in parallel, with predicted confidence deciding how wide each "
+adarshmishra07/jcm-router,B6,plan,yibie,1,1,jcm-router - Coding agents: local proxy that picks the Claude model and reasoning effort per message with a Jev decision while leaving the cached main
+agent-labs-dev/fastbrowse,B4,plan,yibie,1,1,fastbrowse - Browser agents: Jev picks each action from what is on the page wh
+ainame/swift-typesafe,B7,keyword,anotiawang,1,1,"Swift SDK - Unofficial Swift 6.4 client aligned with the Python SDK 0.6.0 API, including Linux"
+owner-A/jev-curate,B8,plan,anilmatcha|cobanov|yibie,3,5,"jev-curate - Dataset engineering: sifts synthetic JSONL and Parquet rows using Jev Noul checks and calibrated confidence scores, streaming passed reco"
+owner-A/jev-git,B5,plan,anilmatcha|yibie,2,5,jev-git - Developer tooling: sub-second Git pre-commit & pre-push reflex gate that screens staged diffs for secrets and destructive commands using Jev
+owner-A/jev-scout,B3,keyword,anilmatcha|yibie,2,5,jev-scout - Developer tooling: sub-second zero-hallucination open-source repo and crate scout using TypeSafe Jev speculative fan-out scoring.
+owner-A/jev-seo,B5,keyword,anilmatcha|yibie,2,5,"jev-seo - Zero-cost, agent-first SEO & Generative Engine Optimization (GEO) search radar CLI suite and MCP server powered by DuckDuckGo and TypeSafe J"
+owner-A/jev-superpowers,B8,unclassified→B8,anilmatcha|yibie,2,5,"jev-superpowers - Systematic software development framework for AI coding agents upgraded with TypeSafe Jev System One typed decisions, zero-hallucina"
+alexwortega/openjev,B1,plan,PLAN,1,1,PLAN 点名，五目录未收录（待验证存在性）
+alterhq/typesafe-sdk-swift,B7,plan,owner-B|anilmatcha|anotiawang|yibie,4,1,"TypeSafe AI Swift SDK - Swift ecosystem: dependency-free Swift 6 client for Jev Choice, Score, and Noul questions with strict concurrency, configurabl"
+andrelandgraf/safer-with-jev,B8,unclassified→B8,yibie,1,1,safer-with-jev - Cloud infrastructure: Neon Function proxy for the Neon AI Gateway that routes decisions with Jev.
+anessbelbati/jev-rerank-bench,B3,keyword,owner-B|anotiawang,2,1,"Jev Rerank Bench - Reranking comparison with raw provider responses, scoring code, uncertainty intervals, and documented limits."
+anil-matcha/awesome-agent-apis,B4,keyword,anilmatcha,1,2,awesome-agent-apis — catalog of APIs and tools that typed decisions can route to.
+anil-matcha/open-business-agents,B4,keyword,anilmatcha,1,2,open-business-agents — specialized business agents that can use Jev as a decision and safety layer.
+anisselbd/jev-phishing-bench,B3,keyword,anotiawang,1,1,"Jev Phishing Bench - 2,000 emails: Jev vs Claude Haiku 4.5 on click-or-not, with calibration, latency, and cost. Haiku wins accuracy here."
+antoniocoppe/jev-harness,B4,keyword,anotiawang,1,1,"jev-harness - Unofficial production layer around Jev: policy, confidence gate, shadow mode, recipes, and an eval CLI"
+anxkhn/jevplayspokemon,B2,keyword,owner-B,1,1,"Jev Plays Pokémon — A Pokémon agent that lets you emulate GBA games and has Jev make the battle decisions based on the current stats, state, moves, an"
+aowang-ai/jev-trade,B8,plan,yibie,1,1,"jev-trade - Crypto trading: asks Jev for a Choice of long or short on a Hyperliquid market each round, places that order, and runs the same loop acros"
+asfarsadewa/human-compiler,B1,keyword,anotiawang,1,1,"Human Compiler - Paste corporate prose; Jev scores passive-aggression, urgency, and information density, then code emits rustc-style diagnostics. Live"
+ashutoshvjti/progressgate,B8,unclassified→B8,anotiawang,1,1,ProgressGate - Detects semantic stagnation in agent loops: Jev judges the trajectory; code returns CONTINUE / WARN / REPLAN / HALT
+awlevin/typesafe-computer-use,B4,keyword,anotiawang|cobanov,2,1,"typesafe-computer-use - macOS computer-use loop: OCR the screen, Jev classifies the next action, then click. About $0.0002/step."
+bastani-inc/atomic,B8,unclassified→B8,yibie,1,1,"Atomic - Coding agent runtime: ships a first-class Jev structured-output provider so an agent's decisions come back typed, through the same decision r"
+bitnovus/jev-spam-eval,B5,plan,owner-B|anotiawang|yibie,3,1,"jev-spam-eval - Spam filtering: zero-shot spam classification with Jev `Boolean` questions, benchmarked against TF-IDF baselines."
+blakestone-x/jev-mcp,B7,plan,owner-B|anotiawang|cobanov|yibie,4,1,"jev-mcp (blakestone-x) - MCP ecosystem: MCP server exposing Jev classify, score, check, match, and screen as tools for any agent, with confidence on e"
+bnsd55/jevmlx,B1,keyword,anilmatcha|anotiawang|cobanov,3,1,jevmlx - Jev-style parallel constrained decisions for any MLX model on Apple Silicon: schema-valid JSON in one forward pass
+brainstormity/jev-moderation-bot,B6,plan,yibie,1,1,"Jev Moderation Bot - Community moderation: Discord bot that scores incoming messages for phishing, spam, and social engineering with Jev and drives a "
+brainwires/jevwire,B7,keyword,cobanov,1,1,"jevwire - MCP tools, an embeddable decision library, and advisory or restrictive Claude Code hooks; judgments do not grant native permissions."
+browser-use/jev-ultrafast,B2,plan,owner-B|anilmatcha|anotiawang|cobanov|yibie,5,1,"Jev Ultrafast - Browser automation: browser-use's ultrafast agent where Jev decides each next action and element to click, calling a language model on"
+butochnikov/laravel-typesafe-jev,B7,plan,anotiawang|cobanov|yibie,3,2,"laravel-typesafe-jev - PHP ecosystem: unofficial Laravel integration for Jev with typed responses, async requests, scoped dependency injection, and te"
+butochnikov/typesafe-sdk-php,B7,keyword,anotiawang,1,2,"PHP SDK - Unofficial PHP client: typed DTOs, promises, and exceptions. Used by the Laravel package below."
+byk/jev-mcp,B7,keyword,cobanov,1,1,"jev-mcp - An eval-first MCP server for Jev, that returns typed judgments (noul, choice, score) with probabilities instead of generated text."
+cephalization/jev-triage,B6,plan,yibie,1,1,"typeful-triage - Open-source maintenance: multiplayer triage dashboard where Jev answers a fixed set of typed questions per issue — kind, severity, ur"
+chetaslua/jevmeter,B3,keyword,anotiawang|cobanov,2,1,"JEVMETER - Live Jev meter on any video: every sentence scored, rendered as a 16:9 edit. Demo: Chetaslua."
+choxos/jev-reviewer,B5,keyword,cobanov,1,1,jev-reviewer - Research-document extraction aid where Jev selects and verifies source lines for verbatim quotes; findings require human review and are
+cline/plugins,B7,keyword,yibie,1,1,"Cline plugins - Coding agents: Cline's official plugin collection includes a Jev-driven browser plugin (`jev-browser`), so Jev arrives as a first-clas"
+cocktailpeanut/jevthoven,B2,keyword,cobanov,1,1,"Jevthoven - Symbolic-music studio where Jev chooses plans, instruments, and bar patterns, and code renders editable music and MIDI."
+codealive-ai/mastra-jev-moderation,B6,plan,yibie,1,1,"mastra-jev-moderation - AI assistants: Mastra input processor that asks Jev a `Boolean` ""must this message be blocked?"" plus a category `Choice` in on"
+coldteadotai/abide,B5,plan,yibie,1,1,"Abide - Agent supervision: reads every edit a coding agent makes and has Jev flag rule violations, with the project reporting that an independent revi"
+colliber/duckdb-jev,B7,keyword,cobanov,1,1,duckdb-jev - DuckDB extension that exposes Jev judgments as SQL values with return types derived from the declared criteria.
+compozy/yoshi,B4,plan,cobanov|yibie,2,1,yoshi - Context management: proxy for Claude Code and Codex where Jev judges which conversation history is still needed before pruning.
+dabit3/jev-experiments,B8,unclassified→B8,cobanov,1,1,"jev-experiments - Collection of inspectable Jev demos, including scripted support conversations with typed intent, escalation, and suggested-response "
+dakdevs/decide-mcp,B7,plan,yibie,1,1,decide-mcp - MCP ecosystem: configurable decision server with percentage scores and bias-profile routing on top of Jev.
+dannote/jev,B7,plan,anotiawang|cobanov|yibie,3,1,jev (Elixir) - Elixir ecosystem: GenServer client that replies with Jev's answer so callers can pattern match on it directly.
+danrwilloughby/snifftest,B5,keyword,yibie,1,1,"Sniff Test - Writing: prose linter that asks Jev ten `Boolean` questions per paragraph (stacked hedges, restating closers, not-X-but-Y turns, naked co"
+dbreunig/building-with-jev-skill,B7,keyword,cobanov,1,1,"Building with Jev - Community agent skill covering question design, state preparation, confidence thresholds, and debugging decisions."
+devagrawal09/jev-code,B8,unclassified→B8,yibie,1,2,jev-code - Coding agents: bounded Jev workflows that keep agent judgments typed instead of free-form.
+devagrawal09/jev-review,B5,plan,owner-B|anotiawang|cobanov|yibie,4,2,jev-review - Software engineering: staged code-review workflow and local dashboard where Jev gates each review stage before a change advances.
+devanshbatham/commit-miner,B5,keyword,anotiawang|cobanov,2,1,"commit-miner - Rust CLI that classifies commit diffs with Jev: bug fixes, security/CWEs, and change types. HTML/CSV reports."
+devmortimer/pi-typesafe,B7,keyword,owner-B|anotiawang,2,2,"pi-typesafe - Pi extension: one consented, key-managed TypeSafe client, batched `typesafe_evaluate`, offline-testable transport."
+devmortimer/pi-warden,B4,keyword,owner-B|anotiawang|cobanov,3,2,pi-warden - Pi guardrails on pi-typesafe: held tool results instead of a dialog; write checks against a project rules file.
+dicklesworthstone/skillranker,B7,keyword,anotiawang|cobanov,2,1,"SkillRanker - Rust CLI: Jev ranks which agent skill fits the next step from live session context, with Claude Code hooks"
+different-ai/openwork,B8,unclassified→B8,yibie,1,1,OpenWork - Engineering workflow: wires Jev into its eval testkit as a verification judge so agent-produced work is gated by typed verdicts rather than
+doeixd/jev-pref,B5,plan,anotiawang|cobanov|yibie,3,1,"jev-pref - Code review: turns the preferences in a project's AGENTS.md into `jev-pref.json` rules that Jev checks against each diff hunk, staged file "
+drinkmoonshine/parallel-constrained-decoding,B1,plan,PLAN,1,1,PLAN 点名，五目录未收录（待验证存在性）
+droidrun/mobile-jev,B4,keyword,anotiawang|cobanov,2,1,"Mobile Jev - Android agent on Mobilerun: Jev decides each tap. Opens Uber, SFO → Golden Gate, payment screen in ~21s / 9 actions. Live studio, CLI, an"
+dzhng/duet-agent,B4,plan,yibie,1,1,duet-agent - Agent harness: keeps a Jev-backed routing table for deciding which model should serve a request.
+ekzhang/openjev-sglang,B1,keyword,anilmatcha|cobanov,2,1,openjev-sglang - Jev-compatible API endpoint backed by open models and prefill-only inference.
+ellipsis-dev/blink,B8,unclassified→B8,anotiawang|cobanov,2,1,blink - Codebase search: an ensemble of walkers asks Jev which file answers a natural-language query
+eugeneboondock/jevsql,B7,keyword,cobanov,1,1,"jevsql - SQL-like filtering, ranking, classification, and scoring with natural-language predicates."
+featherless-ai/simple-jev,B1,keyword,cobanov,1,1,Simple Jev - Transforms compatible open-model logits into typed decisions without a separately trained classifier head; model compatibility is constra
+ffattiger/new-api-plugin-typesafe,B7,keyword,yibie,1,1,new-api-typesafe-plugin - LLM gateway: adds a native `/v1/systemone` endpoint to new-api so typed decisions sit behind the same gateway as chat models
+fhshaik/typesafe-mario,B2,plan,owner-B|anilmatcha|anotiawang|cobanov|yibie,5,1,"typesafe-mario - Gaming: TypeSafe/Jev agent that plays Super Mario Bros. from structured emulator state, choosing each action from emulator-derived fe"
+firassx914/janus,B8,unclassified→B8,owner-B|anilmatcha|cobanov,3,1,Janus - Measures when to use Jev versus other models and routes accordingly.
+fox-islam/typesafe-sdk-php,B7,keyword,owner-B,1,1,"TypeSafe SDK for PHP — Community PHP 8.3 client for TypeSafe's System One API with typed Noul, Choice, and Score questions, a one-call switch between "
+friedjof/jev-mobile,B4,keyword,owner-B,1,1,"jev-mobile — Experimental Android agent that uses Jev for bounded, per-step choices over prevalidated UI actions, with confidence gates, pagination, e"
+frostney/clean-code-review,B3,plan,yibie,1,1,"Clean Code Judge - Code quality: scores every file of a pull request on 31 boolean Clean Code smells plus function size and nesting, then hands the ve"
+gamesonrblx/jevbridge,B7,plan,anilmatcha|anotiawang|cobanov|yibie,4,1,"Jevbridge - Agent bridges: ACP and MCP adapter that exposes Jev typed decisions to Codex, Claude, Grok, and other LLMs."
+gargpratyush/jev-router,B6,plan,anotiawang|cobanov|yibie,3,1,jev-router - Developer tooling: routes Claude Code tasks to the cheapest capable model by asking Jev to choose among candidates.
+gaurav-gosain/jev-go,B7,keyword,anotiawang,1,2,jev-go - Unofficial Go client for typed judgments and calibrated probabilities. `go get github.com/Gaurav-Gosain/jev-go`.
+gaurav-gosain/jev-sec-bench,B8,unclassified→B8,anotiawang,1,2,"jev-sec-bench - Blind prompt-injection and vulnerable-code detection benches on public corpora, built on jev-go."
+genai-craft/openvons,B1,keyword,cobanov,1,1,"openvons - Open decision layer for finite options across text, images, and Japanese voice commands."
+genierobot/typesafe-ai-rails,B7,keyword,owner-B|anotiawang,2,1,"typesafe-ai-rails - Rails integration on top of the official Python SDK: config, usage/cost telemetry, opt-in confidence policies."
+ghalebdweikat/winnow,B5,keyword,cobanov,1,1,winnow - Judges tool results before admitting them into Claude Code context.
+giesn/typesafe-jev-workflow,B6,plan,cobanov|yibie,2,1,Jev email intent workflow - Back-office automation: async LangGraph workflow gets a typed Jev `Choice` (`invoice` or `general`) and routes each inboun
+gilljon/typesafe-ai-rs,B7,keyword,anotiawang,1,1,Rust SDK (typesafe-ai-rs) - Independent async and blocking client for System One.
+giuliosmall/pg_typesafe,B7,keyword,cobanov,1,1,"pg_typesafe - Pre-alpha PostgreSQL C extension exposing Choice, Noul, Score, and batched judgments from SQL."
+godsboy/jev-agent-skill-router,B6,plan,yibie,1,1,"jev-agent-skill-router - Agent infrastructure: routes agent skill selection through typed, confidence-aware Jev decisions so weak matches are declined"
+grmkris/robo-harness,B4,keyword,yibie,1,1,robo-harness - Robotics: SO-101 arm workbench where a Jev decision runner picks bounded joint steps from typed candidate actions under a spend budget.
+gtaras7/typesafe-jev,B6,plan,yibie,1,1,"typesafe-jev CV screener - Recruiting: screens a folder of CVs with Jev typed judgments against an editable policy, re-scoring candidates for free whe"
+harshil1712/slidepilot,B2,keyword,cobanov,1,1,"SlidePilot - Experimental Slidev controller that judges speech transcripts for slide completion, with deterministic checks and manual navigation."
+hawxy/typesafeai.net,B7,keyword,owner-B,1,1,"TypeSafeAI.Net — .NET client for TypeSafe's API with Noul, Choice, and Score question sets, HttpClientFactory and dependency injection support, plus M"
+hegargarcia/jev-playground,B3,plan,yibie,1,1,"Jev Playground - Model evaluation: benchmarks Jev against Luna, Haiku, and Gemini at choosing validated legal moves in explicit-state games, scoring d"
+heman10x-ngu/verdict-open-jev,B1,keyword,cobanov,1,1,Verdict-open-jev - ModernBERT decision engine with calibrated uncertainty and a WebGPU playground.
+hr98w/jev-visual,B8,unclassified→B8,anotiawang|cobanov,2,1,"jev-visual - Educational Jev-like visual inference on Apple Silicon: shared multimodal context, candidate scoring, sorting-factory / Breakout / gestur"
+hyunjunjeon/jev-judgment,B5,plan,yibie,1,2,"jev-judgment - Coding agents: agent skill that sends closed coding-agent judgments to Jev so verdicts stay typed, cheap, and comparable across runs."
+hyunjunjeon/pi-quiet-ask,B7,keyword,yibie,1,2,pi-quiet-ask - Coding agents: gives the Pi agent a quiet Jev decision layer for judgments it would otherwise hand to a chat model.
+iammrduncan/typesafe-ai-benchmark,B3,keyword,owner-B|anilmatcha|anotiawang|cobanov,4,1,typesafe-ai-benchmark - Side-by-side of Jev vs Qwen 3.8 27B on Cerebras for the same System One questions. Video: Shannon.
+iamvatsalpatel/tiershift,B8,unclassified→B8,cobanov,1,1,tiershift - Policy-bounded model routing for TypeScript and Python.
+ikermoel/open-alternative-jev,B8,unclassified→B8,yibie,1,1,open-alternative-jev - Open alternative: runs a Jev-shaped decision model locally on your own GPU.
+ilkerulusoy/pi-jev-compact,B7,keyword,cobanov,1,1,"pi-jev-compact - Selective, verbatim context compaction for Pi using Jev model."
+inanna-malick/jev-dsl,B7,keyword,cobanov,1,1,jev-dsl - Early-alpha Haskell DSL that encodes typed question packets and decodes answers; HTTP transport is left to the caller.
+itsmostafa/typesafe-mcp,B7,keyword,owner-B|anilmatcha|anotiawang|cobanov,4,1,"typesafe-mcp - Go CLI and single-binary MCP for Claude Desktop, Claude Code, and Codex."
+jamesward/zio-typesafe-ai,B7,plan,anotiawang|yibie,2,1,zio-typesafe-ai - Scala ecosystem: ZIO client for TypeSafe AI with a typed DSL over Jev decisions.
+jaredpalmer/kev,B1,plan,cobanov|yibie,2,1,"kev - Trainable replica: a tiny Jev-like model on top of Qwen2.5-0.5B that trains and runs on a MacBook, shipped with its own research runs and evalua"
+jarrodwatts/jev-trader,B8,keyword,anilmatcha|anotiawang|cobanov,3,1,Jev Trader - One buy/sell decision per Monad block on Kuru's MON-USDC book. Live demo: jev-trader.vercel.app.
+jekozyra/pi-typesafe-router,B6,keyword,yibie,1,1,pi-typesafe-router - Coding agents: routes Pi's work through typed Jev decisions.
+jexp/neo4jev,B2,keyword,anotiawang,1,1,"neo4jev - Neo4j graph navigation: at each node Jev chooses which relationship to follow, with beam search over log-probabilities"
+jgridifier/jev-research-eval,B3,keyword,yibie,1,1,"jev-research-eval - Research automation: reproducible eval harness plus field note for Jev Ultrafast research-browser tasks, with QC'd cases, a suite "
+jkudish/jev-browser,B4,plan,cobanov|yibie,2,2,"Jev Browser - Browser automation: drives a browser with Jev deciding each step, pitched as fast and very cheap next to LLM-driven browsing."
+jkudish/jev-mcp,B7,plan,anilmatcha|anotiawang|yibie,3,2,"jev-mcp (jkudish) - MCP ecosystem: proof-of-concept MCP server that puts Jev claim verification, content screening, and candidate ranking behind stand"
+jmanhype/jev-dspy-lab,B7,keyword,anotiawang,1,1,"Jev DSPy Lab - Unofficial DSPy companion that records and replays TypeSafe calls while measuring calibration, selective risk, confidence-gated abstent"
+joelhooks/pi-fast-jev-compaction,B4,plan,cobanov|yibie,2,1,"pi-fast-jev-compaction - Context management: Pi extension that keeps conversation text verbatim while pruning stale tool history with Jev, falling bac"
+johnhughes3/legalforecastbench,B8,plan,yibie,1,1,LegalForecast-MTD - Legal forecasting: benchmark that asks Jev to predict federal motion-to-dismiss rulings from the judge's written record and scores
+jomatsu/pi-jev-auto-mode,B7,keyword,anotiawang,1,2,"pi-jev-auto-mode - Pi auto mode: Jev semantically approves `bash` / `write` / `edit`, and fails closed when it cannot decide."
+jomatsu/zod-jev,B7,keyword,cobanov,1,2,zod-jev - Pairs local Zod shape validation with Jev semantic validation.
+jonesmelton/verdict,B1,keyword,owner-B,1,1,OCaml SDK - Unofficial eio-based client.
+joshlarsen/jev-t-rex-runner,B2,keyword,anotiawang,1,1,jev-t-rex-runner - Chrome dinosaur game played by Jev.
+joshmn/typesafe-sdk,B7,keyword,owner-B|anotiawang,2,1,"Ruby SDK - Community Ruby 3.1+ client: Noul / Choice / Score, retries, model listing, thread-safe pooled HTTP. No async client."
+jourdanlabs/assay-001,B8,unclassified→B8,anotiawang,1,1,"ASSAY-001 - Independent pre-registered check of Jev calibration and type safety on Banking77 / CLINC150. Split verdict, full logs. Write-up: donttrust"
+kavehmz/typesafe-playground,B2,plan,yibie,1,1,"typesafe-playground - Interactive playground: small Jev experiments that put the decision on screen, from routing a support message to steering a car "
+kelbie/hunch,B5,plan,yibie,1,1,"Hunch - Code review: plain-English rules that Jev checks code against, locally or on every pull request, with Jev picking one label per finding."
+kevinpita/pi-jev-context,B7,keyword,cobanov,1,1,pi-jev-context - Opt-in Pi extension that filters older messages from model requests while preserving the original session history.
+kevthetech143/super-jev,B8,unclassified→B8,yibie,1,1,super-jev - Decision harness: turns a Jev answer into a bounded action instead of leaving the caller to interpret it.
+kieranklaassen/ruby_llm-typesafe,B8,unclassified→B8,owner-B|anotiawang,2,1,RubyLLM TypeSafe - TypeSafe provider for RubyLLM 2 with offline model metadata and typed responses.
+kikoncuo/jevfire,B1,keyword,anotiawang,1,1,"JEVfire - Jev-inspired parallel decisions for CUDA LLMs via vLLM, with a browser Mario demo (~71 ms/action locally)"
+kitze/pagegrade,B8,unclassified→B8,yibie,1,3,"pagegrade - Content quality: grades page sections for clarity, writing, and on-page SEO with Jev and returns per-section scores."
+kitze/skillbox,B7,keyword,cobanov|yibie,2,3,skillbox - Skills infrastructure: self-hosted versioned skills library that adds optional Jev recommendations using your own TypeSafe or Gateway key.
+kitze/unclutter,B4,plan,anotiawang|cobanov|yibie,3,3,"unclutter - Browser tooling: WXT extension where Jev decides per page element whether it is clutter, removing it under reusable template rules."
+komikat/jev-bfs,B3,plan,yibie,1,1,jev-bfs - Search tooling: finds link paths between English Wikipedia articles by having Jev rank each page's outgoing links while Python controls the 
+kshetrajna12/reflex,B1,keyword,cobanov,1,1,"reflex - Open-model decision engine with shared-state inference, isolated question branches, and a WebGPU demo; browser and Python configurations diff"
+kuhung/understanding-jev,B8,plan,yibie,1,1,"深入解读 Jev 模型：毫秒级判定与工程边界 - Chinese deep-dive: examines Jev's millisecond judgments and, more usefully, where its engineering boundaries lie."
+kxzk/typesafe-jev-drone-demo,B2,keyword,yibie,1,1,typesafe-jev-drone-demo - Simulation: Three.js drone simulator with a Python backend where Jev drives the navigation decisions.
+kylemclaren/jevql,B7,plan,owner-B|anilmatcha|anotiawang|cobanov|yibie,5,1,"jevql - Data tooling: psql-shaped CLI and Go/TypeScript/Python SDKs that run plain SQL on a vanilla Postgres (no extension) and then ask Jev Noul, Cho"
+kyotofin/tax-doc-classifier,B6,keyword,cobanov,1,1,"tax-doc-classifier - Classifies text-bearing PDF pages into IRS form and page-kind candidates with a confidence gate; document triage, not tax advice,"
+lakeday-org/perch,B8,unclassified→B8,cobanov,1,1,perch - Semantic code linter that evaluates code units against configurable Jev questions.
+lbotinelly/jev-little-airways,B2,keyword,anotiawang,1,1,"Little Airways - Toy archipelago ATC: Jev judges divert / emergency / who lands first from each plane's local state, ~150 ms."
+leepokai/jev-guard,B5,plan,anilmatcha|cobanov|yibie,3,1,"jev-guard - Agent security: prompt-injection and dangerous-action guard for Claude Code, Codex, Pi, and ACP agents, with Jev deciding what to block."
+legacybridge-tech/pi-typesafe-jev,B7,keyword,yibie,1,1,pi-typesafe-jev - Coding agents: exposes System One judgments as five Pi tools so a model makes narrow semantic judgments while code and users keep co
+leonaaardob/fast-dev-compaction,B4,plan,cobanov|yibie,2,1,"fast-dev-compaction - Context management: Codex port of the Jev-guided compaction idea, restoring context verbatim around a session compaction rather "
+ljedrz/nachalnik,B8,unclassified→B8,owner-B,1,1,Jev-assisted compaction — A simple example of how Jev can be used for content-aware compaction in the kamchatka agent.
+luantak/is-malicious,B5,plan,owner-B|anilmatcha|cobanov|yibie,4,1,"is-malicious - Software supply-chain security: asks Jev `Noul` checks about source and build files, escalates suspicious chunks for a second pass, and"
+lukaske/jev-doom-agent,B2,keyword,anotiawang,1,1,"jev-doom-agent - Browser-native Doom with Chocolate Doom WASM, spatial state, and live decision telemetry."
+mahlernim/jev-korean-benchmark,B3,keyword,anilmatcha|cobanov,2,1,"jev-korean-benchmark - Small Korean/English sample study with recorded responses, including medical-text questions; not a clinical validation."
+mapika/decider,B1,plan,anotiawang|yibie,2,1,decider - Open models: reproduces the System One shape with a Qwen3.5-2B fine-tune that emits typed decisions with calibrated probabilities in one pas
+marissafamularo/citation-verifier,B3,plan,yibie,1,1,"citation-verifier - Academic publishing: checks whether each cited paper actually supports the sentence citing it, with Claude locating the quote, Jev"
+mattn/sqlite3-jev,B7,keyword,anotiawang,1,1,sqlite3-jev - SQLite C extension: `jev_noul` / `jev_choice` / `jev_score` as SQL functions via libcurl
+mejiasd3v/pi-jev-router,B6,plan,yibie,1,1,pi-jev-router - Coding agents: adds automatic per-request model routing to the Pi coding agent through Jev decisions on Vercel AI Gateway.
+mgaitan/sqlite-jev,B7,plan,yibie,1,1,"sqlite-jev - SQLite ecosystem: loadable C extension and Python package that expose Jev Noul, Choice, and Score judgments as SQL functions and batched "
+milanboers/jev-plays-pokemon,B2,plan,yibie,1,1,"jev-plays-pokemon - Gaming: reads Pokémon Red game state as text, answers typed questions each turn, and lets deterministic code turn the answers into"
+mizchi/jev-gomoku,B7,keyword,anotiawang,1,1,jev-gomoku - MoonBit client plus Jev-vs-Jev gomoku; write-up: jev 同士に五目並べで対戦させた.
+monteduro/killmyidea,B2,keyword,cobanov,1,1,"killmyidea - Startup-idea evaluator that chooses kill, fix, or ship."
+moritzkremb/jev-voice-browser,B4,keyword,cobanov,1,1,"jev-voice-browser - Maps partial speech transcripts to browser intents and observed targets, with code deciding whether to act, wait, or ask."
+mrnugget/jev-shell-history,B8,unclassified→B8,anotiawang|cobanov,2,1,jev-shell-history - Fish-style zsh autosuggestions: Jev ranks recent history as you type
+n3ndor/n8n-nodes-typesafe-jev,B8,unclassified→B8,cobanov,1,1,n8n-nodes-typesafe-jev - Community n8n node for asking multiple typed questions over workflow state.
+nandhakishorm/laya,B1,plan,yibie,1,1,"Laya - Open alternative: non-autoregressive decision model that answers `choice`, `score`, and `noul` questions with RLCD-trained calibrated probabili"
+nasrallah-al/jev-cli,B7,keyword,owner-B,1,1,"jev-cli — TypeScript CLI (`npm install -g jevctl`) that turns Jev judgments into pipeable, exit-code-gated shell commands: `verify` claims against evi"
+nekuda-ai/windtunnel,B8,plan,yibie,1,1,"WindTunnel - Browser-agent benchmark: measures WebMCP against other browser-agent interfaces, with Jev appearing as one of the compared configurations"
+niazmorshed2007/jev-review,B5,keyword,anotiawang|cobanov,2,1,"Jev Review MCP - Local-first MCP: Claude Code, Codex, Cursor, and OpenCode get structured quality review from Jev while they write. Not the same proje"
+nidhi-singh02/agent-router,B4,keyword,cobanov,1,1,agent-router - Pre-release Herdr integration that filters eligible coding models by quota and policy before Jev ranks them.
+noelzappy/tripwire,B8,unclassified→B8,anotiawang,1,1,"tripwire - Unofficial AI SDK middleware and OpenAI-compatible proxy: seven Jev checks on every LLM response in ~100 ms, confidence-gated"
+noplan-inc/limpet,B4,plan,yibie,1,1,limpet - Coding agents: Stop hook that keeps an agent from finishing too early by judging plain-language completion rules with Jev.
+nshkrdotcom/typesafe_sdk,B7,keyword,owner-B|anotiawang,2,1,Elixir SDK - Community Hex package `typesafe_sdk` for `system_one` and model listing. Docs: HexDocs.
+nullpo-jp/pocketjev,B8,unclassified→B8,anotiawang,1,1,"PocketJev - On-device iPhone visual decisions with MLX + Qwen3-VL option logits. Camera + 3-choice, no text generation, ~1s, no photo saved."
+nyarlathoteppppp/pi-heed,B7,keyword,owner-B|yibie,2,2,pi-heed - Runtime constraints: checks every side-effecting tool call from the Pi agent against what the user actually asked for.
+nyarlathoteppppp/pi-jev-context,B7,keyword,owner-B,1,2,"pi-jev-context — Pi extension that shortens long tool output before it enters the context, so no cached prompt prefix is invalidated: Jev gives every "
+obie/ruby_decision_model,B8,unclassified→B8,cobanov,1,1,ruby_decision_model - Ruby client with standard-library transport for TypeSafe and OpenRouter decision endpoints.
+phureewat29/got-jev,B8,unclassified→B8,anotiawang,1,1,"got-jev - Game of Thrones roleplay as Jon Snow. A story model writes the scene; Jev answers where he is, how much danger, and what should play under i"
+phyous/tsai-civ2,B8,unclassified→B8,anotiawang,1,2,"Jev × Civilization II - Original Civ II in a browser; Jev chooses empire, city, research, and unit actions. Experimental; no verified win yet"
+phyous/tsai-sc,B2,plan,owner-B|anotiawang|cobanov|yibie,4,2,tsai-sc - Gaming: drives original StarCraft shareware through keyboard and mouse with Jev action probabilities recorded per decision.
+pithings/advocaat,B8,unclassified→B8,owner-B|anotiawang|cobanov|yibie,4,1,advocaat - Data tooling: small type-safe client for asking Jev questions about a dataset.
+premo-cloud/typesafe-sdk-java,B7,keyword,owner-B|cobanov,2,1,"typesafe-sdk-java - Community Java 17 client for Choice, Score, and Noul, with an optional Spring Boot starter."
+prismhq/jev-router,B6,plan,yibie,1,1,jev-router (prismhq) - LLM infrastructure: open-source LiteLLM-based router where a Jev decision picks which model serves each request.
+qkal/canny,B8,unclassified→B8,cobanov,1,1,"Canny - Evidence ledger that challenges unsupported ""done"" claims from coding agents."
+query-farm/vgi-typesafe,B8,unclassified→B8,owner-B,1,1,"vgi-typesafe — DuckDB integration, loaded through the community VGI extension, that exposes Choice, Noul, and Score as SQL table functions to `LATERAL"
+r-ms/mini-jev,B1,plan,yibie,1,1,mini-jev - Local reproduction: implements Jev's typed-decision interface on top of a local LLM.
+rafalwilinski/vibecheck,B8,unclassified→B8,cobanov,1,1,Vibe Check for X - Chrome extension that scores draft posts and reply context before posting; optional media descriptions come from a separate vision 
+raihankhan-rk/diffjury,B5,plan,yibie,1,1,"DiffJury - Code review: routes each pull request by risk with Jev before a human reviewer is assigned, doubling as a review coach."
+rajivkuriakose/typesafe-jev-examples,B7,plan,yibie,1,1,"typesafe-jev-examples - Starter examples: worked ticket-triage and reranking examples runnable through OpenRouter without an early-access key, shipped"
+razorback16/openjev,B1,keyword,cobanov,1,1,OpenJev (DiffusionGemma) - Independent Jev-compatible server over DiffusionGemma/vLLM; the documented setup requires custom vLLM patches.
+reachjalil/jev-tree,B8,unclassified→B8,anilmatcha|anotiawang|cobanov,3,2,jev-tree - Recursive Choice over a taxonomy so catalogs larger than Jev's 255-option cap still fit
+reachjalil/jevlogs,B8,unclassified→B8,anilmatcha|anotiawang|cobanov,3,2,Jev Logs - OpenTelemetry log triage: Jev scores diagnostic value and priority before an expensive LLM looks at the archive.
+realzachi/pg-jev,B8,unclassified→B8,anilmatcha|cobanov,2,2,pg-jev - PostgreSQL extension for semantic questions over table rows.
+realzachi/typesafe-adblock,B4,plan,anotiawang|yibie,2,2,"typesafe-adblock - Browser tooling: Chrome extension that asks Jev whether each DOM element is an ad, turning ad blocking into a stream of per-element"
+rinnecoder/jev-behavior-study,B8,unclassified→B8,cobanov,1,1,"jev-behavior-study - Independent synthetic-task study of Jev 1.13.0 framing sensitivity and failures, with raw responses and offline report checks."
+romaluev/jev-ego,B7,keyword,anotiawang,1,1,jev-ego - Browser agent on ego lite: one TypeSafe request picks operation + indexed element; agent-facing observe/act/suggest/step CLI
+romanslack/jev-drone,B2,plan,owner-B|anilmatcha|anotiawang|cobanov|yibie,5,1,jev-drone - Robotics simulation: camera-only autonomous drone in MuJoCo that puts a Jev judgment model in the control loop at 2.5 Hz.
+ryankung/rotom,B8,unclassified→B8,yibie,1,1,rotom - Local gateways: OpenAI- and Anthropic-compatible API gateway that carries Jev through its model catalog and evaluation path.
+ryanwaits/secondlayer,B8,unclassified→B8,yibie,1,1,secondlayer - Fault triage: self-hosted Stacks data service whose Slack gate and fault-triage paths both run on Jev decisions.
+saibimajdi/typesafe-dotnet-sdk,B7,keyword,anotiawang,1,1,NET SDK - Community client for typed questions and confidence-scored answers.
+samtay32/jev-system-architect,B8,unclassified→B8,anotiawang,1,1,jev-system-architect - Skill that hunts for brittle semantic logic and turns it into Choice / Score / Noul boundaries.
+samuraigpt/llm-wiki-agent,B4,keyword,anilmatcha,1,1,"llm-wiki-agent — persistent, interlinked knowledge workflow that pairs naturally with semantic retrieval and citation checks."
+santos-sanz/jev-audio-beeper,B8,unclassified→B8,anotiawang,1,1,"jev-audio-beeper - Low-latency audio insult detector: Jev decides, ffmpeg beeps in ~466 ms without rewriting the rest of the track."
+shantanugoel/ask-jev-skill,B7,keyword,anotiawang,1,2,ask-jev-skill - Hermes skill: ask Jev whenever the agent needs a bounded decision.
+shantanugoel/mario-jev,B2,plan,PLAN,1,2,PLAN 点名，五目录未收录（待验证存在性）
+sharziki/semdecide,B8,unclassified→B8,cobanov,1,1,semdecide - Typed semantic decisions for Unix pipelines and CI.
+shiftynick/jev-axi,B5,plan,owner-B|anilmatcha|anotiawang|cobanov|yibie,5,1,"jev-axi - Agent safety: PreToolUse gate for Claude Code and Codex that has Jev score each shell command for destructiveness, exfiltration, remote code"
+shitianfang/wakegate,B4,plan,owner-B|cobanov|yibie,3,1,"wakegate - Long-running agents: before a sleeping agent's LLM is resumed on a timer or incoming event, Jev answers a `Choice` (wake, not yet, unrelate"
+shogo-nfrealmusic/jev-eval,B3,plan,yibie,1,1,jev-eval - Third-party check: compares Jev against GPT-4o-mini and Claude Sonnet 4.5 under identical conditions on the same judgment task.
+silbercue/public-browser,B4,plan,yibie,1,1,"public-browser - Browser control: lets Claude Code and Cursor drive a real Chrome profile, with a Jev loop deciding the actions, reporting roughly 30%"
+silverstein/minutes,B8,plan,yibie,1,1,minutes - Meeting notes: local-first transcription app whose live voice path runs its evaluations through Jev.
+simxnherrera/jevr,B8,unclassified→B8,cobanov,1,1,jevr - Native R client for typed questions and provider-independent answers through TypeSafe or OpenRouter.
+siroccomask/snake-jev,B2,keyword,anotiawang,1,1,snake-jev - Snake: hundreds of typed direction decisions per run.
+skyvern-ai/jevscape,B8,unclassified→B8,cobanov,1,1,JevScape - RuneBench-based RuneScape harness that maps Jev choices to a bounded game-action catalog and records tick-level results.
+smithersai/smithers,B8,unclassified→B8,yibie,1,1,Smithers - Agent frameworks: TypeScript workflow framework with a Jev session checker wired into its workflows.
+sorrycc/typesafe-snake,B2,keyword,anilmatcha|cobanov,2,1,typesafe-snake - Snake autoplayer with one typed decision per tick and code-generated legal moves.
+sosopop/jev_stock,B8,plan,yibie,1,1,"jev_stock - Short-term forecasting: experimental Hong Kong stock framework that turns structured market state into a Jev decision on price direction, "
+standardagents/jevpilot,B4,keyword,cobanov,1,1,JevPilot - Three.js driving simulation where Jev chooses among candidate paths and speeds while local code handles vehicle dynamics and geometry.
+stephanj/parallelconstraintdecoding,B8,unclassified→B8,cobanov,1,1,parallelConstraintDecoding - Java and llama.cpp experiments in parallel constrained decoding.
+stumble/jev-go,B7,keyword,anotiawang|yibie,2,1,jev-go - Go ecosystem: community Go SDK for Jev.
+sufianetaouil/every,B8,unclassified→B8,owner-B|anotiawang,2,1,"Every - Semantic code-search CLI: a yes/no question against every function, ranked by Noul probability."
+superagents-lab/jev-search,B3,plan,owner-B|anilmatcha|anotiawang|cobanov|yibie,5,1,"Jev Search - Web search: uses Jev Noul judgments on result titles and snippets to rank Search1API results by relevance, with application code merging "
+supercorp-ai/supercov,B8,unclassified→B8,owner-B|anotiawang|cobanov|yibie,4,1,Supercov - Code quality for coding agents: Jev answers twelve `Noul` properties per source file so the agent knows what to fix first.
+tamaratran/fast-jev-compaction,B4,plan,anotiawang|cobanov|yibie,3,1,"fast-jev-compaction - Context management: Claude Code plugin that replaces the compaction summary with Jev decisions, scoring every tool call and resu"
+taruntomar122/jev-askable-arm,B8,unclassified→B8,anotiawang,1,1,jev-askable-arm - Zero-shot English goals on a simulated Franka. Jev chains hardcoded primitives.
+teyhouse/jev-secret-detection,B8,unclassified→B8,anotiawang,1,1,jev-secret-detection - Secret-in-diff detector with repeatable Jev verdicts.
+theoleecj/openjev,B1,plan,owner-B|anotiawang,2,2,openjev - Can we run something Jev-like on a home RTX 3090? Reads option logits instead of generating text. Not TypeSafe's model.
+theoleecj/semif,B8,unclassified→B8,cobanov,1,2,"SemIf - Formerly OpenJev: an independent study of typed option readout from frozen open models, with shared-prefix experiments and a WebGPU demo."
+theooliveira/pi-jev,B7,keyword,yibie,1,1,pi-jev (TheoOliveira) - Coding agents: semantic tool routing and typed System One decisions for the Pi coding agent.
+thruwire/foreman,B4,plan,anotiawang|cobanov|yibie,3,1,"Foreman - Software factory: sits above Codex workers and has Jev independently judge whether an implementation is complete, its tests sufficient, or a"
+tianyucodings/nanojev,B1,plan,cobanov|yibie,2,1,"NanoJev - Open replica: a 0.6B parallel decision model that returns full probability distributions with no output-token decoding, shipped with its tra"
+tky-27/jevslop,B3,plan,yibie,1,1,JevSlop - Writing quality: scores public note.com articles on eight Jev `Score` axes inside a single `systemOne` request and turns them into a 0-100 S
+tokentrim/jev-agent-failure-benchmark,B3,keyword,anotiawang,1,1,jev-agent-failure-benchmark - Who&When Pro (injected agent failures): Jev vs a strong LLM on who / which step / error category.
+trungdq88/youtube-sponsor-detection,B8,unclassified→B8,cobanov,1,1,Sponsor Skip - Finds sponsor reads in YouTube transcripts or transcribed audio while code owns timestamps and playback skipping.
+tumf/jev-cli,B7,plan,yibie,1,1,jev-cli - Developer tooling: small dependency-free CLI for Jev.
+twister915/typesafe-ai,B8,unclassified→B8,owner-B|anotiawang,2,1,"TypeSafe AI for Rust - Another Rust client: async + blocking transports, typed responses, observable retries."
+typesafe-ai/skills,B0,plan,owner-B|anilmatcha|anotiawang|cobanov|yibie,5,4,typesafe-ai/skills - Official tooling: installable agent skills package (`npx skills add typesafe-ai/skills`) that teaches agents the Jev workflow.
+typesafe-ai/system-one-adapter-python,B0,plan,owner-B|anilmatcha|anotiawang|cobanov,4,4,"System One adapter (Python) - Official drop-in `TypeSafeClient` replacement backed by LLM APIs, for comparing Jev against chat models on the same ques"
+typesafe-ai/typesafe-sdk-js,B0,official-owner,owner-B|anilmatcha|anotiawang|cobanov,4,4,JavaScript / TypeScript SDK - Official client. `npm install @typesafe-ai/sdk`. Docs: JavaScript SDK.
+typesafe-ai/typesafe-sdk-python,B0,official-owner,owner-B|anilmatcha|anotiawang|cobanov,4,4,Python SDK - Official client. `pip install typesafe-sdk`. Docs: Python SDK.
+ufec/jev-block-android-ad,B8,unclassified→B8,owner-B,1,1,"JevNoiseGate — Android app that asks Jev whether each incoming notification or SMS is noise and suppresses only what Jev explicitly flags, with a loca"
+unicodeveloper/jevocks,B8,plan,yibie,1,1,Jevinik - Stock decisions: terminal that gathers live market evidence through Valyu and asks Jev whether a stock is likely to trade higher over the ne
+us/jev-local,B1,plan,yibie,1,1,jev-local - Local reproduction: Jev-compatible `POST /v1/systemone` server answering typed `Choice`/`Score`/`Noul` questions with confidence from open
+usenotra/notra,B8,unclassified→B8,yibie,1,1,Notra - Marketing analytics: production GEO platform whose `NOTRA_JEV_CLASSIFIERS` flag routes brand-visibility classifiers off an LLM and onto Jev `B
+useopencompany/opencompany,B5,keyword,yibie,1,1,opencompany - Agent workspace: runs its approval review through Jev so workspace actions are gated by a typed decision.
+vclic/smoking-extraction-benchmark,B3,keyword,anotiawang,1,1,"Smoking-history extraction benchmark - 1,000 synthetic notes: Jev vs OpenAI structured outputs on accuracy, cost, and latency"
+vercel-labs/ai-cli,B7,plan,yibie,1,4,AI CLI - Developer tooling: Vercel Labs CLI that can run Jev as the evaluation model for its `evaluate` command.
+vercel-labs/ai-python,B0,official-owner,yibie,1,4,ai-python - Python ecosystem: the official Vercel AI SDK for Python carries Jev through its evaluation operation and Gateway examples.
+vercel-labs/fx,B0,official-owner,yibie,1,4,fx - Coding agent: ships a `typesafe_permission_reviewer` builtin so the agent's permission decisions run through Jev rather than an LLM call.
+vercel-labs/json-render,B4,plan,yibie,1,4,json-render - Generative UI: Vercel Labs' UI framework uses Jev in its compose path to pick which components and actions a rendered interface should c
+vercel/eve,B7,plan,anotiawang|yibie,2,1,eve - Agent frameworks: Vercel's eve engine ships Jev as the default evaluation model (`typesafe-ai/jev`) in its experimental evaluate path.
+vicente-md/jev-resilience,B8,unclassified→B8,anotiawang,1,1,jev-resilience - Unofficial Spring WebFlux starter: a semantic circuit breaker that uses Jev to catch silent HTTP 200 failures
+vinilana/jev-eval-agent,B3,keyword,anotiawang|cobanov,2,1,jev-eval-agent - Public eval harness for early Jev tests.
+vinnylarouge/jevlike,B8,unclassified→B8,anotiawang|cobanov,2,1,jevlike - Train a small one-pass scorer that maps context + N text options to a probability per option. Includes Doom / chess vision demos and a Wikis
+vlad-terin/jev-browser,B4,keyword,anotiawang,1,1,"Jev Browser (Vlad Terin) - Agent skill + runtime: Codex plans, Jev selects elements, a runner acts and verifies each step."
+wiktorb2004/llama-index-jev,B7,plan,owner-B|anotiawang|cobanov|yibie,4,1,LlamaIndex Jev - Retrieval / RAG: unofficial LlamaIndex adapter where Jev `Score`s each retrieved passage and `Choice`/`Noul` selects the query engine
+wy-coliney/jev-browser-use,B4,keyword,cobanov,1,1,jev-browser-use - Codex browser skill that uses Jev for navigation and target selection while Codex handles text entry and outcome verification.
+y0usaf/pi-jev,B7,keyword,owner-B|anotiawang|cobanov|yibie,4,1,pi-jev - Agent safety: adds a measured tool-call gate to the Pi coding agent so risky calls are checked by Jev before execution.
+yibie/awesome-jev,B0,plan,PLAN,1,1,PLAN 点名，五目录未收录（待验证存在性）
+ying-kai-liao/jev-browser,B4,keyword,anotiawang,1,1,"jev-browser - Unofficial browser automation: an LLM plans the outcome, Jev decides each click/type on a Playwright snapshot (~300 ms/call). Ships as a"
+yodablocks/jev-orderby-bench,B8,unclassified→B8,owner-B,1,1,"jev-orderby-bench — Independent measurement of whether `ORDER BY` over a Jev probability is defensible, with a pre-registered gate on pairwise inversi"
+yusukebe/hono-jev-router,B7,plan,anotiawang|cobanov|yibie,3,1,"hono-jev-router - Web frameworks: Hono middleware that routes HTTP requests by meaning rather than by method and path, deciding with Jev."
+zhengxuyu/litjev,B8,unclassified→B8,anotiawang|cobanov|yibie,3,1,"LitJev - Local reproduction: a reproduction of Jev that turns any Qwen model into a fast decision model, serving the same `/v1/systemone` schema (Choi"
+zhihz/openjev,B1,plan,cobanov|yibie,2,1,"openjev - Open research: independent local preview that answers bilingual probability questions from context, questions, and candidate answers, inspir"
+zhirschtritt/typesafe-go,B7,keyword,cobanov,1,1,typesafe-go - Idiomatic Go SDK for the TypeSafe API.
+zhuyansen/jev-search-rerank-eval,B3,keyword,anotiawang|cobanov,2,1,"Jev search rerank eval - 9,831 labelled pairs: Jev rerank vs BM25 / bge-m3, with judge-circularity measured. Fusion wins; Jev alone does not beat embe"

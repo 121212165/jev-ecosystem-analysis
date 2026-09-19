@@ -1,0 +1,138 @@
+# 生成 eval/b8_review.jsonl（RB8 复审轮，2 条 × 5 问，LLM-as-Jev 自写合成样本）
+import json, pathlib
+
+root = pathlib.Path(r".")
+
+a_state = {
+    "pool": 68,
+    "disposition_counts": {"浅采要点": 28, "浅采": 18, "留矩阵": 20, "留矩阵存疑": 2, "深采": 0},
+    "script_gate": "_rb8_precheck.py：处置 Counter 28/18/20/2=68 header ok True；41 数字 token→源文件反查 0 MISS；dabit3 266B(→0KB) getsize 核；GATE 一次 PASS",
+    "phantom_self_catch": "初稿又写入 2 条幻影占位行(owner-B-more/owner-A-jev-git)——但按 B7 教训在跑脚本前主动删除，故 _rb8_precheck 首跑即 幻影0/漏库0/68=68 直接 PASS（B7 是靠脚本逼出、B8 是脚本前自查）",
+    "r7a_validated": "R7-a(矩阵须与权威元数据池行级 diff)在 B8 首跑验证：phantom=矩阵slug-池slug=[]、missing=池slug-矩阵slug=[]，双向 diff 均空",
+    "decision_no_rerun": "§一显式记'本批零 key 复跑=0'为决策非遗漏：PLAN 定 B8 扫读批、DoD-3 已由前四批 4 次复跑超额、且 assay/orderBy/sec-bench 复跑需真 API key 打真 jev endpoint 或自带数据集，非'一条命令零 key 可跑'",
+    "empty_shell_honest": "dabit3 266B 近空壳、devagrawal09 npm 0.0.1 占位——不臆测正文、归 留矩阵·存疑 + getsize 事实，挂 §五 FINAL contents API 复核",
+}
+b_state = {
+    "eval_cluster": "B8 名'其余'实为整场战役'独立评测/基准'富矿：assay-001/jev-orderby-bench/jev-sec-bench/legalforecastbench/jev-behavior-study/windtunnel/tiershift/open-alternative-jev 八库第三方、预注册、带基线/CI/负结果",
+    "external_recurrence": "该集群从外部复证我们内部反复撞见的两主线：①自评自证循环性 ②confidence≠校准（assay CLINC ECE0.0204校准 vs Banking0.0936过conf、open-alt MMLU conf高5点、canny跨run漂移~0.05）",
+    "threshold_defect_family": "'阈值要测不要拍'(janus不发默认阈值测一个/every ±0.10内重问取平均/audio-beeper 0.72是POC非生产/tripwire各阈报prec-rec-cov)——直治我们'改档位不重测'缺陷族(第4/5次复发)",
+    "grading": "浅采·要点 28 偏高，系本批评测库密集带量化+基线+CI/负结果，非把普通客户端硬抬；深采 0（PLAN 扫读批不占名额）",
+    "tripwire_c3_gap": "tripwire ③=✗(诚实自曝'尚无对真 Jev 的准确率、29 mock 测试')却进浅采·要点，凭①②(免key eval CLI+per-check阈值表)——与 B7 rajivkuriakose '③✗仍可进要点'同型张力",
+}
+
+def q(qid, prim, question, options=None, legend=None):
+    d = {"qid": qid, "primitive": prim, "question": question}
+    if options: d["options"] = options
+    if legend: d["legend"] = legend
+    return d
+
+A_OPT2 = ["缺陷仍在（我又写了 2 幻影行），但拦截点从'脚本逼出'左移到'跑脚本前自查删除'",
+          "缺陷已根除（本批矩阵一次写对、无幻影）",
+          "脚本变强了（_rb8_precheck 比 _rb7 更能自动清幻影）",
+          "无害（占位行本就该保留作提醒）"]
+A_OPT3 = ["复跑需真 API key 打真 jev endpoint 或自带数据集，不属'零 key 一条命令可跑'，且 DoD-3 已由前四批超额",
+          "扫读批一律不许跑任何复跑，PLAN 禁止",
+          "评测库都不可信，所以选择不跑",
+          "忘了跑，事后补个理由"]
+A_OPT5 = ["Counter(28/18/20/2=68)+行级双向diff(幻影0漏库0)+41token反查+dabit3体积，四维齐且首跑即PASS",
+          "只回填计数没查完整性",
+          "脚本报错无结论",
+          "什么都没查（初稿即全对）"]
+B_OPT_MAIN = ["自然汇聚：八库由第三方独立复证我们内部两主线，是全场唯一的外部效度锚，理应升主线",
+              "过重：B8 只是扫读批，不该比深读批 B4/B6 更受强调",
+              "无法判断",
+              "应降为脚注，评测库与我们链路无关"]
+
+entry_a = {
+    "id": "RB8-A-01", "category": "B8 工件一致性与前置核账",
+    "state": json.dumps(a_state, ensure_ascii=False),
+    "questions": [
+        q("phantom_self_catch_leftshift", "noul",
+          "B8 初稿我又写入了 2 条幻影占位行（与 B7 同错），但这次在跑 _rb8_precheck 前就按 B7 教训主动删除，致脚本首跑即 68=68/幻影0/漏库0 直接 PASS——'缺陷仍产生但拦截点左移到脚本前'算不算流程真的进步？"),
+        q("r7a_what_first_pass_proves", "choice",
+          "_rb8_precheck 首跑 GATE PASS（行级双向 diff 幻影0/漏库0）实际证明了什么？",
+          options=A_OPT2),
+        q("zero_rerun_justification", "choice",
+          "B8 全是评测/基准库却记'零 key 复跑=0'——这一决策的最站得住脚的理由是？",
+          options=A_OPT3),
+        q("empty_shell_handling", "noul",
+          "dabit3(266B 近空壳)、devagrawal09(npm 0.0.1 占位)未臆测正文、归'留矩阵·存疑'+getsize 体积事实并挂 FINAL contents API 复核——相较'直接按 README 首行给个处置'，这一处理是否更恰当？"),
+        q("rb8_coverage", "choice",
+          "RB8 前置核账对 batch08 定稿的实际覆盖范围？",
+          options=A_OPT5),
+    ],
+    "gold": [
+        {"qid": "phantom_self_catch_leftshift", "noul": 0.8, "probabilities": [0.8, 0.2], "confidence": 0.72,
+         "samples": [0.85, 0.78, 0.8, 0.9, 0.65], "blind": "agree",
+         "rationale": "真进步体现在'拦截成本'：B7 靠脚本逼出（多一轮 diff+改脚本），B8 在源头自查删除、脚本首跑即过，说明 R7-a 教训已内化为写矩阵时的默认动作；但只给 0.8 不给更高，因为缺陷产生率没降（我还是习惯性写了 2 幻影行），进步只在'检测前移'而非'不再犯'——理想的下一级是连幻影行都不再起草；0.2 给此保留"},
+        {"qid": "r7a_what_first_pass_proves", "choice": A_OPT2[0],
+         "probabilities": [0.78, 0.12, 0.06, 0.04], "confidence": 0.74,
+         "samples": [A_OPT2[0]]*4+[A_OPT2[1]], "blind": "agree",
+         "rationale": "首跑 PASS 不是'本批没犯错'（矩阵初稿确有 2 幻影），而是'脚本前自查已清'——R7-a 的价值恰在于此：它给了一个可自查的机械步骤（列 slug 集与池 diff），使我能在跑脚本前先手动跑一遍这道 diff 而删掉幻影。判'缺陷已根除'样本混淆了'结果对'与'过程对'；判'脚本变强'错，脚本逻辑与 B7 同、只是这次输入已干净"},
+        {"qid": "zero_rerun_justification", "choice": A_OPT3[0],
+         "probabilities": [0.82, 0.08, 0.06, 0.04], "confidence": 0.78,
+         "samples": [A_OPT3[0]]*4+[A_OPT3[1]], "blind": "agree",
+         "rationale": "关键区分：我们的复跑硬标准是'零 key 一条命令可跑'；assay/orderBy/sec-bench 打的是真 jev endpoint、需真 key 或自带数据集，本就不入准入门，加上 DoD-3 已由前四批 4 次复跑超额满足——'跑不了+没必要'双理由成立；判'PLAN 一律禁止扫读批复跑'过度泛化（PLAN 未禁，只是不分配深读名额）；判'评测库不可信'是错误归因"},
+        {"qid": "empty_shell_handling", "noul": 0.86, "probabilities": [0.86, 0.14], "confidence": 0.8,
+         "samples": [0.9, 0.85, 0.84, 0.88, 0.82], "blind": "agree",
+         "rationale": "266B 若只看首行'可检视 Jev demo 集合'易被误判为可用库给浅采，实为近空壳；用 getsize 锚定体积事实+归存疑+挂 FINAL 二次取证（contents API 看是否正文在他处），把'存在但内容缺席'与'内容真薄'分开，不臆测也不误杀；0.14 给'dabit3 也可能正文真在别处、存疑若 FINAL 复核翻案则本轮判薄需回改'"},
+        {"qid": "rb8_coverage", "choice": A_OPT5[0],
+         "probabilities": [0.85, 0.07, 0.04, 0.04], "confidence": 0.82,
+         "samples": [A_OPT5[0]]*4+[A_OPT5[1]], "blind": "agree",
+         "rationale": "本轮脚本做了四维且全绿：Counter 回填 28/18/20/2、POOL 断言+行级双向 diff（幻影0漏库0）、41 token→源文件 0 MISS、dabit3 体积走 getsize；与 B7 相比检查项相同但因源头自查首跑即 PASS，覆盖面持平而摩擦更低"},
+    ],
+    "note": "自写合成样本（对 B8 产物的结构化诊断统计），非任何真实作品",
+}
+
+entry_b = {
+    "id": "RB8-B-01", "category": "B8 定级与反哺判断质量",
+    "state": json.dumps(b_state, ensure_ascii=False),
+    "questions": [
+        q("grading_28_not_inflated", "noul",
+          "本批'浅采·要点'28（九个批次里单批要点数最多）且 0 深读——考虑到 assay/orderBy/janus/tiershift 等确凿带基线/CI/负结果/预注册，这一 28 是名实相符（评测富矿批自然多要点）还是把普通客户端硬抬？"),
+        q("eval_cluster_as_mainline", "choice",
+          "把 B8 的'独立+预注册评测集群'升为 FINAL 主线之一（外部复证循环自证/校准两线）——是证据自然汇聚，还是给单批过重权重？",
+          options=B_OPT_MAIN),
+        q("threshold_antidote_actionability", "score",
+          "把'阈值要测不要拍 + 边界带二次判'(janus/every/audio-beeper/tripwire)转成对 jev_eval 的可操作度分级？legend: 0=只复述各库怎么测阈; 1=提炼'测而非拍'原则但未接到我们金标流程; 2=给出可执行动作(金标集输出 threshold-coverage-accuracy 三线表、对|p−阈|<0.10 条目二次判定取均值或转人工)",
+          legend={"0": "仅复述库内测法", "1": "提炼原则未接链路", "2": "给出可执行的金标三线表+边界复采样动作"}),
+        q("canny_drift_convergence", "noul",
+          "把 canny'概率已校准但跨 run 漂移约 0.05'并入 nous drift_within_round 主题——是真收敛（同指'跨 run 不稳'）还是把'校准后仍漂'与'轮内漂移'两个不同量强扭一起？"),
+        q("tripwire_c3_gap_selfflag", "noul",
+          "tripwire ③=✗（自曝尚无对真 Jev 准确率、仅 29 mock 测试）却凭①②进'浅采·要点'，与 B7 rajivkuriakose 同型——这条'③✗仍可进要点'的定级是否自洽、还是该 FINAL 用统一 rubric 复核？"),
+    ],
+    "gold": [
+        {"qid": "grading_28_not_inflated", "noul": 0.78, "probabilities": [0.78, 0.22], "confidence": 0.72,
+         "samples": [0.82, 0.75, 0.78, 0.85, 0.7], "blind": "agree",
+         "rationale": "'浅采·要点'判据是'有值得单独记的可移植机制/数字'；B8 这批评测库密集带预注册门(orderBy 6门)、ECE/Brier(assay/sec-bench)、阈值扫描曲线(janus)、成本-质量对照(tiershift $13.23→$7.95同质量)、诚实负结果(behavior-study)，与 B0/B1 纯传输客户端不可同日而语，28 反映该批真实构成；0.22 给'28 与 18/20 的线仍由我主观划、缺机器可复核判据(如要点须含≥1带对照的量化点)'，与 B7 同一未决项"},
+        {"qid": "eval_cluster_as_mainline", "choice": B_OPT_MAIN[0],
+         "probabilities": [0.8, 0.12, 0.04, 0.04], "confidence": 0.76,
+         "samples": [B_OPT_MAIN[0]]*4+[B_OPT_MAIN[1]], "blind": "agree",
+         "rationale": "我们前七批的校准/循环性结论全部来自'我方自读自评'，效度短板正是'自证'；B8 八库是第一方之外、先注册判据再打分的独立测量，等于给内部两主线补了外部锚——这种'独立复证'的角色稀缺性(全场仅此一批)恰是升主线的理由而非反对理由；判'过重'样本把'扫读批'当成'低价值'，混淆了采集深度与证据效度；判'降脚注'错，它与我们链路高度相关(校准、阈值、循环性正是我们主命题)"},
+        {"qid": "threshold_antidote_actionability", "score": 2, "probabilities": [0.06, 0.16, 0.78], "confidence": 0.74,
+         "samples": [2, 2, 2, 1, 2], "blind": "agree",
+         "rationale": "batch08 §四不止复述，直接落到'jev_eval Score 维门与梗筛选输出 threshold-coverage-accuracy 三线表、对 |p−阈值|<0.10 条目二次判定取均值或转人工'——且把它对上'改档位不重测'缺陷族(第4/5次复发)给出替代动作，可执行；判 1 的样本认为'转人工阈值 0.10 这个带宽仍是拍的、未给如何随数据集标定带宽'，故留 0.16"},
+        {"qid": "canny_drift_convergence", "noul": 0.7, "probabilities": [0.7, 0.3], "confidence": 0.62,
+         "samples": [0.75, 0.68, 0.7, 0.8, 0.58], "blind": "agree",
+         "rationale": "两者确同指'同一输入不同 run 给不同输出'的不稳，归入 drift 主题不算强扭；但差异真实：canny 是'已校准后的跨 run 漂移~0.05'(校准≠稳定)，nous drift_within_round 是'轮内多次采样一致性'——一个是 run 间的绝对概率位移、一个是轮内相对抖动。并列有价值(互补覆盖'校准好仍会漂')但须标注量纲不同，故只给 0.7、留 0.3 给这条边界"},
+        {"qid": "tripwire_c3_gap_selfflag", "noul": 0.6, "probabilities": [0.6, 0.4], "confidence": 0.55,
+         "samples": [0.68, 0.6, 0.55, 0.65, 0.52], "blind": "agree",
+         "rationale": "①②③约束的是'深读准入'，不强制约束'浅采·要点 vs 浅采'分档，故 tripwire 无③仍可凭①(免key eval CLI)+②(per-check 阈值表带 precision/recall/coverage)进要点，不算违字面；但同批有库带②有数字却因单薄留矩阵，而 tripwire 自曝'无真 Jev 准确率'仍进要点，'有可跑评测脚手架'能否补偿'尚无有效测量结果'存在真张力——与 B7 rajivkuriakose 同型，登记 FINAL 统一 rubric 复核，不强抬置信"},
+    ],
+    "note": "自写合成样本（对 B8 产物的结构化诊断统计），非任何真实作品",
+}
+
+out = root / "eval" / "b8_review.jsonl"
+with out.open("w", encoding="utf-8", newline="\n") as f:
+    f.write(json.dumps(entry_a, ensure_ascii=False) + "\n")
+    f.write(json.dumps(entry_b, ensure_ascii=False) + "\n")
+
+# 自检
+for e in (entry_a, entry_b):
+    for g in e["gold"]:
+        s = sum(g["probabilities"])
+        assert abs(s - 1.0) <= 0.02, (e["id"], g["qid"], "probs sum", s)
+        assert len(g["samples"]) == 5, (e["id"], g["qid"], "samples", len(g["samples"]))
+        assert g["blind"] == "agree", g["qid"]
+    assert "自写合成样本" in e["note"]
+print("wrote", out, out.stat().st_size, "B; entries=2 x5; 自检 probs/samples/blind/note 全过")
