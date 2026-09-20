@@ -50,3 +50,16 @@ a1_preview_link 0.70、a3_ending 0.70、grade_a3 0.72。
 
 修订完成后重跑 `_verify_zero_conflict.py`（断言随 D1 同步更新），要求 24+ 项全过 exit 0；
 公开仓 README 改动经 `_make_public_bundle.py` 重建后 BANNED 断言须仍为零残留，再提交推送。
+
+## 六、落地记账（2026-09-20 本轮内完成）
+
+- D1–D9 全部修毕：改名 article_review.* → b9_review.*；三篇文稿共 13 处；仓内 README 5 处；终检断言 5 处同步。
+- 复验三关门全绿：
+  1. `_make_public_bundle.py` exit 0 —— reviewrep=8、jsonl entries=30、questions=152、敏感断言零残留（70 文件 BAD 0）；
+  2. `jev_eval.py --check --files eval/b9_review.jsonl` —— ✓ 10 条 / 50 题；
+  3. `_verify_zero_conflict.py` —— 24/24 断言 exit 0。
+- 推送：公开仓 commit f3afa8d（远程 main HEAD 与本地一致，已核）。
+- 本轮自曝并被门拦下的两处（记入纪律）：
+  - RB9 生成器把禁词写成字面原词 → builder 的 BANNED 断言在重建时 exit 1 拦下，改描述性写法；
+  - 补丁用中文弯引号、文稿实为 ASCII 直引号 → patch 断言 MISS 退出，未发生静默错改。
+- 遗留（低置信口味项，交人工定稿）：文①复跑库是否实名化（R06 conf 0.75）、正文分段密度（0.72）、文③是否需要公众号化改写。
